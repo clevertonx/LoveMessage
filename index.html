@@ -1,0 +1,679 @@
+
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Parabéns pra você</title>
+    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parabéns pra você</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .title {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        td {
+            border: 1px solid black;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            vertical-align: middle;
+            background-color: #cce7ff;
+            position: relative;
+        }
+
+        td input {
+            font-weight: bold;
+            font-size: 30px;
+            border: 0px;
+            text-align: center;
+            padding: 25px 2px 2px 2px;
+            width: 50px;
+            background: transparent;
+            text-transform: uppercase;
+        }
+
+        .question {
+            text-align: left;
+            padding-left: 5px;
+            width: 300px;
+            font-weight: bold;
+            background-color: #f0f8ff;
+        }
+
+        .highlight {
+            background-color: #f0f8ff;
+            font-weight: bold;
+        }
+
+        .hint {
+            font-size: 1em;
+            margin-top: 10px;
+            text-align: left;
+            max-width: 500px;
+        }
+
+        #conteudo {
+            background: #ec3131;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 10px;
+            text-align: center;
+            font-family: sans-serif;
+            display: none;
+        }
+
+        .btn {
+            background: black;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 80px;
+            border-radius: 5px;
+            z-index: 20;
+        }
+
+        #imagens {
+            display: flex;
+            justify-content: space-between;
+            position: fixed;
+            bottom: -100px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            transition: bottom 1s ease-in-out;
+        }
+
+        .coluna {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .esquerda {
+            flex: 1;
+            align-items: flex-start;
+            margin-top: -120px;
+        }
+
+        .centro {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .direita {
+            flex: 1;
+            align-items: flex-end;
+            margin-top: -120px;
+        }
+
+        .imagem-animada {
+            width: 450px;
+            height: auto;
+            margin: 10px 0;
+            opacity: 0;
+            animation: animacaoImagem 3s ease-out forwards;
+        }
+
+        @keyframes animacaoImagem {
+            0% {
+                opacity: 0;
+                transform: translateY(55%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="title">Descubra as Palavras Ocultas</div>
+
+    <table>
+        <tr>
+            <td colspan="11" style="text-align: center; font-weight: bold;">História e elementos da moda.</td>
+        </tr>
+
+        <tr>
+            <td class="question">Técnica de tingimento que utiliza substâncias naturais para criar padrões irregulares e
+                coloridos nos tecidos.</td>
+            <td><input type="text" maxlength="1">🌞</td>
+            <td><input type="text" maxlength="1">💎</td>
+            <td><input type="text" maxlength="1">⭐</td>
+            <td class="highlight"><input type="text" maxlength="1" value="-" readonly></td>
+            <td><input type="text" maxlength="1">🌊</td>
+            <td><input type="text" maxlength="1">🌍</td>
+            <td><input type="text" maxlength="1">⭐</td>
+        </tr>
+        <tr>
+            <td class="question">Conforme com a moda prevalecente, com aquilo que se considera elegante, de bom gosto,
+                moderno.</td>
+            <td><input type="text" maxlength="1">🍂</td>
+            <td><input type="text" maxlength="1">🌹</td>
+            <td><input type="text" maxlength="1">🔥</td>
+            <td><input type="text" maxlength="1">🐞</td>
+            <td><input type="text" maxlength="1">💎</td>
+            <td><input type="text" maxlength="1">🌿</td>
+            <td><input type="text" maxlength="1">🌜</td>
+        </tr>
+        <tr>
+            <td class="question">Tipo de tecido sintético, conhecido por sua elasticidade e resistência.</td>
+            <td><input type="text" maxlength="1">🌈</td>
+            <td><input type="text" maxlength="1">🌍</td>
+            <td><input type="text" maxlength="1">⚡</td>
+            <td><input type="text" maxlength="1">💧</td>
+            <td><input type="text" maxlength="1">🌹</td>
+        </tr>
+        <tr>
+            <td class="question">Acessório que complementa o visual e protege os olhos dos raios solares.</td>
+            <td><input type="text" maxlength="1">🌿</td>
+            <td><input type="text" maxlength="1">⚡</td>
+            <td><input type="text" maxlength="1">🍁</td>
+            <td><input type="text" maxlength="1">🌈</td>
+            <td><input type="text" maxlength="1">🌿</td>
+            <td><input type="text" maxlength="1">🔥</td>
+        </tr>
+        <tr>
+            <td class="question">Peça de roupa feminina que se tornou um símbolo de feminilidade e elegância na década
+                de 1950.</td>
+            <td><input type="text" maxlength="1">🔥</td>
+            <td><input type="text" maxlength="1">🌹</td>
+            <td><input type="text" maxlength="1">💎</td>
+            <td><input type="text" maxlength="1">🌹</td>
+        </tr>
+        <tr>
+            <td class="question">Tipo de sapato esportivo, popularizado nos anos 80, com cadarços e sola de borracha.
+            </td>
+            <td><input type="text" maxlength="1">🦋</td>
+            <td><input type="text" maxlength="1">⭐</td>
+            <td><input type="text" maxlength="1">🌊</td>
+            <td><input type="text" maxlength="1">🔥</td>
+        </tr>
+        <tr>
+            <td class="question">Fibra natural obtida de animais como ovelhas, conhecida por sua maciez e capacidade de
+                aquecer.</td>
+            <td><input type="text" maxlength="1">🌈</td>
+            <td><input type="text" maxlength="1">🌹</td>
+        </tr>
+        <tr>
+            <td class="question">Derivação de uma palavra francesa, uma redução da expressão soutien-gorge</td>
+            <td><input type="text" maxlength="1">🔥</td>
+            <td><input type="text" maxlength="1">🍁</td>
+            <td><input type="text" maxlength="1">🌞</td>
+            <td><input type="text" maxlength="1">💎</td>
+            <td><input type="text" maxlength="1">🌹</td>
+        </tr>
+        <tr>
+            <td class="question">Estilo de moda que valoriza a simplicidade e a funcionalidade, com linhas retas e cores
+                neutras.</td>
+            <td><input type="text" maxlength="1">🍀</td>
+            <td><input type="text" maxlength="1">💎</td>
+            <td><input type="text" maxlength="1">🌜</td>
+            <td><input type="text" maxlength="1">💎</td>
+            <td><input type="text" maxlength="1">🍀</td>
+            <td><input type="text" maxlength="1">🌹</td>
+            <td><input type="text" maxlength="1">🌈</td>
+            <td><input type="text" maxlength="1">💎</td>
+            <td><input type="text" maxlength="1">🔥</td>
+            <td><input type="text" maxlength="1">🍀</td>
+            <td><input type="text" maxlength="1">🌿</td>
+        </tr>
+        <tr>
+            <td class="question">Tipo de gola alta e justa, que se tornou um símbolo de elegância e sofisticação.</td>
+            <td><input type="text" maxlength="1">💧</td>
+            <td><input type="text" maxlength="1">🌿</td>
+            <td><input type="text" maxlength="1">🌈</td>
+            <td><input type="text" maxlength="1">⭐</td>
+        </tr>
+        <tr>
+            <td class="question">Tipo de tecido leve e transparente, geralmente usado em vestidos e blusas elegantes.
+            </td>
+            <td><input type="text" maxlength="1">🌿</td>
+            <td><input type="text" maxlength="1">💧</td>
+            <td><input type="text" maxlength="1">🪐</td>
+            <td><input type="text" maxlength="1">🌹</td>
+            <td><input type="text" maxlength="1">🌜</td>
+            <td><input type="text" maxlength="1">🌻</td>
+            <td><input type="text" maxlength="1">🌹</td>
+        </tr>
+        <tr>
+            <td class="question">Tipo de acessório feminino usado para carregar itens pessoais e é considerado
+                indispensável.</td>
+            <td><input type="text" maxlength="1">✨</td>
+            <td><input type="text" maxlength="1">🌿</td>
+            <td><input type="text" maxlength="1">🌈</td>
+            <td><input type="text" maxlength="1">🔥</td>
+            <td><input type="text" maxlength="1">🌹</td>
+        </tr>
+        <tr>
+            <td class="question">Peça de roupa feita de denim, é um clássico e nunca sai de moda.</td>
+            <td><input type="text" maxlength="1">🐛</td>
+            <td><input type="text" maxlength="1">⭐</td>
+            <td><input type="text" maxlength="1">🌹</td>
+            <td><input type="text" maxlength="1">🌜</td>
+            <td><input type="text" maxlength="1">🔥</td>
+        </tr>
+        <tr>
+            <td class="question">Nome do famoso casaco grosso usado em climas frios, geralmente com enchimento.</td>
+            <td><input type="text" maxlength="1">🚀</td>
+            <td><input type="text" maxlength="1">🍁</td>
+            <td><input type="text" maxlength="1">🍂</td>
+            <td><input type="text" maxlength="1">🍂</td>
+            <td><input type="text" maxlength="1">⭐</td>
+            <td><input type="text" maxlength="1">💧</td>
+        </tr>
+        <tr>
+            <td class="question">Termo que descreve um estilo de moda que celebra a liberdade de expressão e desafia as
+                normas tradicionais de gênero e sexualidade.</td>
+            <td><input type="text" maxlength="1">⏰</td>
+            <td><input type="text" maxlength="1">🍁</td>
+            <td><input type="text" maxlength="1">⭐</td>
+            <td><input type="text" maxlength="1">⭐</td>
+            <td><input type="text" maxlength="1">💧</td>
+        </tr>
+        <tr>
+            <td class="question">Marca de luxo italiana é famosa por seus artigos de couro e bolsas.</td>
+            <td><input type="text" maxlength="1">🎨</td>
+            <td><input type="text" maxlength="1">⭐</td>
+            <td><input type="text" maxlength="1">💧</td>
+            <td><input type="text" maxlength="1">🔥</td>
+            <td><input type="text" maxlength="1">🌹</td>
+            <td><input type="text" maxlength="1">⚡</td>
+            <td><input type="text" maxlength="1">⭐</td>
+        </tr>
+    </table>
+
+    <div class="hint">
+        <p><strong>Instruções:</strong></p>
+        <ul>
+            <li>Complete cada linha com a palavra correta correspondente.</li>
+            <li>Cada símbolo representa uma letra do alfabeto.</li>
+            <li>Vamos ver se você consegue desvendar o que eu desejo pra você!</li>
+        </ul>
+    </div>
+
+    <div class="title">Mensagem Secreta</div>
+
+    <table id="puzzle-table">
+        <tr>
+            <td><input type="text" maxlength="1">🍂</td>
+            <td><input type="text" maxlength="1">⭐</td>
+            <td><input type="text" maxlength="1">🌈</td>
+            <td><input type="text" maxlength="1">💎</td>
+            <td><input type="text" maxlength="1">🌻</td>
+            <td class="highlight"><input type="text" maxlength="1" value="" readonly></td>
+            <td><input type="text" maxlength="1">🌹</td>
+            <td><input type="text" maxlength="1">🌜</td>
+            <td><input type="text" maxlength="1">💎</td>
+            <td><input type="text" maxlength="1">🎨</td>
+            <td><input type="text" maxlength="1">⭐</td>
+            <td><input type="text" maxlength="1">💧</td>
+            <td><input type="text" maxlength="1">🔥</td>
+            <td><input type="text" maxlength="1">🌹</td>
+            <td><input type="text" maxlength="1">💧</td>
+            <td><input type="text" maxlength="1">💎</td>
+            <td><input type="text" maxlength="1">🌿</td>
+            <td class="highlight"><input type="text" maxlength="1" value="" readonly></td>
+            <td><input type="text" maxlength="1">🍀</td>
+            <td><input type="text" maxlength="1">⭐</td>
+            <td><input type="text" maxlength="1">🍁</td>
+            <td class="highlight"><input type="text" maxlength="1" value="" readonly></td>
+            <td><input type="text" maxlength="1">🌹</td>
+            <td><input type="text" maxlength="1">🍀</td>
+            <td><input type="text" maxlength="1">🌿</td>
+            <td><input type="text" maxlength="1">💧</td>
+            <td class="highlight"><input type="text" maxlength="1" value="!" readonly></td>
+        </tr>
+        <tr>
+            <td><input type="text" maxlength="1">🐞</td>
+            <td><input type="text" maxlength="1">🌿</td>
+            <td><input type="text" maxlength="1">🐛</td>
+            <td><input type="text" maxlength="1">⭐</td>
+            <td class="highlight"><input type="text" maxlength="1" value="" readonly></td>
+            <td><input type="text" maxlength="1">⚡</td>
+            <td><input type="text" maxlength="1">⭐</td>
+            <td><input type="text" maxlength="1">🌈</td>
+            <td><input type="text" maxlength="1">⭐</td>
+            <td><input type="text" maxlength="1">✨</td>
+            <td><input type="text" maxlength="1">💧</td>
+            <td><input type="text" maxlength="1">🌹</td>
+            <td><input type="text" maxlength="1">🍀</td>
+            <td><input type="text" maxlength="1">🌿</td>
+            <td><input type="text" maxlength="1">🔥</td>
+            <td class="highlight"><input type="text" maxlength="1" value="" readonly></td>
+            <td><input type="text" maxlength="1">🌹</td>
+            <td class="highlight"><input type="text" maxlength="1" value="" readonly></td>
+            <td><input type="text" maxlength="1">🍀</td>
+            <td><input type="text" maxlength="1">🍁</td>
+            <td><input type="text" maxlength="1">🌈</td>
+            <td><input type="text" maxlength="1">🐞</td>
+            <td><input type="text" maxlength="1">⭐</td>
+            <td><input type="text" maxlength="1">💧</td>
+            <td class="highlight"><input type="text" maxlength="1" value="" readonly></td>
+            <td><input type="text" maxlength="1">💎</td>
+            <td><input type="text" maxlength="1">🌜</td>
+            <td><input type="text" maxlength="1">⚡</td>
+            <td><input type="text" maxlength="1">💧</td>
+            <td><input type="text" maxlength="1">💎</td>
+            <td><input type="text" maxlength="1">🎨</td>
+            <td><input type="text" maxlength="1">⭐</td>
+            <td><input type="text" maxlength="1">🌈</td>
+        </tr>
+        <tr>
+            <td><input type="text" maxlength="1">⭐</td>
+            <td class="highlight"><input type="text" maxlength="1" value="" readonly></td>
+            <td><input type="text" maxlength="1">🍂</td>
+            <td><input type="text" maxlength="1">🌿</td>
+            <td><input type="text" maxlength="1">💧</td>
+            <td><input type="text" maxlength="1">🌞</td>
+            <td><input type="text" maxlength="1">⭐</td>
+            <td class="highlight"><input type="text" maxlength="1" value="" readonly></td>
+            <td><input type="text" maxlength="1">⏰</td>
+            <td><input type="text" maxlength="1">🍁</td>
+            <td><input type="text" maxlength="1">⭐</td>
+            <td class="highlight"><input type="text" maxlength="1" value="" readonly></td>
+            <td><input type="text" maxlength="1">🎨</td>
+            <td><input type="text" maxlength="1">🌿</td>
+            <td><input type="text" maxlength="1">⚡</td>
+            <td><input type="text" maxlength="1">⭐</td>
+            <td class="highlight"><input type="text" maxlength="1" value="" readonly></td>
+            <td><input type="text" maxlength="1">⭐</td>
+            <td class="highlight"><input type="text" maxlength="1" value="." readonly></td>
+        </tr>
+        <tr>
+            <td><input type="text" maxlength="1">🌹</td>
+            <td class="highlight"><input type="text" maxlength="1" value="" readonly></td>
+            <td><input type="text" maxlength="1">⚡</td>
+            <td><input type="text" maxlength="1">🌹</td>
+            <td><input type="text" maxlength="1">🌊</td>
+            <td><input type="text" maxlength="1">🌹</td>
+            <td class="highlight"><input type="text" maxlength="1" value="" readonly></td>
+            <td><input type="text" maxlength="1">🌊</td>
+            <td><input type="text" maxlength="1">💎</td>
+            <td><input type="text" maxlength="1">🌹</td>
+            <td class="highlight"><input type="text" maxlength="1" value="" readonly></td>
+            <td><input type="text" maxlength="1">🌹</td>
+            <td><input type="text" maxlength="1">🌿</td>
+            <td class="highlight"><input type="text" maxlength="1" value="" readonly></td>
+            <td><input type="text" maxlength="1">🔥</td>
+            <td><input type="text" maxlength="1">⭐</td>
+            <td><input type="text" maxlength="1">🍁</td>
+            <td class="highlight"><input type="text" maxlength="1" value="" readonly></td>
+            <td><input type="text" maxlength="1">🌈</td>
+            <td><input type="text" maxlength="1">🌹</td>
+            <td><input type="text" maxlength="1">🌊</td>
+            <td><input type="text" maxlength="1">🌿</td>
+            <td class="highlight"><input type="text" maxlength="1" value="," readonly></td>
+            <td><input type="text" maxlength="1">🍀</td>
+            <td><input type="text" maxlength="1">⭐</td>
+            <td class="highlight"><input type="text" maxlength="1" value="" readonly></td>
+            <td><input type="text" maxlength="1">🔥</td>
+            <td><input type="text" maxlength="1">💎</td>
+            <td><input type="text" maxlength="1">🌜</td>
+            <td><input type="text" maxlength="1">🌞</td>
+            <td><input type="text" maxlength="1">🌿</td>
+        </tr>
+        <tr>
+            <td><input type="text" maxlength="1">🍀</td>
+            <td><input type="text" maxlength="1">🌹</td>
+            <td><input type="text" maxlength="1">💎</td>
+            <td><input type="text" maxlength="1">🔥</td>
+            <td class="highlight"><input type="text" maxlength="1" value="" readonly></td>
+            <td><input type="text" maxlength="1">⚡</td>
+            <td><input type="text" maxlength="1">🌿</td>
+            <td><input type="text" maxlength="1">🍀</td>
+            <td><input type="text" maxlength="1">🚀</td>
+            <td><input type="text" maxlength="1">🌈</td>
+            <td><input type="text" maxlength="1">⭐</td>
+            <td><input type="text" maxlength="1">🌞</td>
+            <td><input type="text" maxlength="1">🌿</td>
+            <td class="highlight"><input type="text" maxlength="1" value="" readonly></td>
+            <td><input type="text" maxlength="1">⭐</td>
+            <td class="highlight"><input type="text" maxlength="1" value="" readonly></td>
+            <td><input type="text" maxlength="1">🪐</td>
+            <td><input type="text" maxlength="1">💧</td>
+            <td><input type="text" maxlength="1">🌹</td>
+            <td><input type="text" maxlength="1">🌞</td>
+            <td><input type="text" maxlength="1">🌿</td>
+            <td class="highlight"><input type="text" maxlength="1" value="." readonly></td>
+        </tr>
+        <tr>
+            <td><input type="text" maxlength="1">⏰</td>
+            <td><input type="text" maxlength="1">🍁</td>
+            <td><input type="text" maxlength="1">⭐</td>
+            <td class="highlight"><input type="text" maxlength="1" value="" readonly></td>
+            <td><input type="text" maxlength="1">⭐</td>
+            <td><input type="text" maxlength="1">🔥</td>
+            <td><input type="text" maxlength="1">🌞</td>
+            <td><input type="text" maxlength="1">⭐</td>
+            <td class="highlight"><input type="text" maxlength="1" value="" readonly></td>
+            <td><input type="text" maxlength="1">🌜</td>
+            <td><input type="text" maxlength="1">🌿</td>
+            <td><input type="text" maxlength="1">🎨</td>
+            <td><input type="text" maxlength="1">🌿</td>
+            <td class="highlight"><input type="text" maxlength="1" value="" readonly></td>
+            <td><input type="text" maxlength="1">⚡</td>
+            <td><input type="text" maxlength="1">💎</td>
+            <td><input type="text" maxlength="1">⚡</td>
+            <td><input type="text" maxlength="1">🌈</td>
+            <td><input type="text" maxlength="1">🌿</td>
+            <td class="highlight"><input type="text" maxlength="1" value="" readonly></td>
+            <td><input type="text" maxlength="1">🌞</td>
+            <td><input type="text" maxlength="1">💧</td>
+            <td><input type="text" maxlength="1">🌹</td>
+            <td><input type="text" maxlength="1">🪐</td>
+            <td><input type="text" maxlength="1">🌹</td>
+            <td class="highlight"><input type="text" maxlength="1" value="" readonly></td>
+            <td><input type="text" maxlength="1">🌞</td>
+            <td><input type="text" maxlength="1">🌿</td>
+            <td><input type="text" maxlength="1">🌊</td>
+            <td><input type="text" maxlength="1">🌹</td>
+        </tr>
+        <tr>
+            <td><input type="text" maxlength="1">🌹</td>
+            <td class="highlight"><input type="text" maxlength="1" value="" readonly></td>
+            <td><input type="text" maxlength="1">🍂</td>
+            <td><input type="text" maxlength="1">⭐</td>
+            <td><input type="text" maxlength="1">🌈</td>
+            <td><input type="text" maxlength="1">💎</td>
+            <td><input type="text" maxlength="1">⚡</td>
+            <td><input type="text" maxlength="1">💎</td>
+            <td><input type="text" maxlength="1">🌊</td>
+            <td><input type="text" maxlength="1">🌹</td>
+            <td><input type="text" maxlength="1">🌊</td>
+            <td><input type="text" maxlength="1">⭐</td>
+            <td class="highlight"><input type="text" maxlength="1" value="" readonly></td>
+            <td><input type="text" maxlength="1">⏰</td>
+            <td><input type="text" maxlength="1">🍁</td>
+            <td><input type="text" maxlength="1">⭐</td>
+            <td class="highlight"><input type="text" maxlength="1" value="" readonly></td>
+            <td><input type="text" maxlength="1">🎨</td>
+            <td><input type="text" maxlength="1">🌿</td>
+            <td><input type="text" maxlength="1">⚡</td>
+            <td><input type="text" maxlength="1">⭐</td>
+            <td class="highlight"><input type="text" maxlength="1" value="" readonly></td>
+            <td><input type="text" maxlength="1">🍀</td>
+            <td><input type="text" maxlength="1">⭐</td>
+            <td><input type="text" maxlength="1">💧</td>
+            <td><input type="text" maxlength="1">⭐</td>
+            <td><input type="text" maxlength="1">⚡</td>
+            <td><input type="text" maxlength="1">⭐</td>
+        </tr>
+        <tr>
+            <td><input type="text" maxlength="1">⭐</td>
+            <td class="highlight"><input type="text" maxlength="1" value="" readonly></td>
+            <td><input type="text" maxlength="1">⏰</td>
+            <td><input type="text" maxlength="1">🍁</td>
+            <td><input type="text" maxlength="1">⭐</td>
+            <td class="highlight"><input type="text" maxlength="1" value="" readonly></td>
+            <td><input type="text" maxlength="1">⚡</td>
+            <td><input type="text" maxlength="1">🌹</td>
+            <td><input type="text" maxlength="1">🌊</td>
+            <td><input type="text" maxlength="1">🌹</td>
+            <td class="highlight"><input type="text" maxlength="1" value="" readonly></td>
+            <td><input type="text" maxlength="1">🔥</td>
+            <td><input type="text" maxlength="1">🌿</td>
+            <td><input type="text" maxlength="1">🌜</td>
+            <td><input type="text" maxlength="1">🐞</td>
+            <td><input type="text" maxlength="1">🌿</td>
+            <td class="highlight"><input type="text" maxlength="1" value="" readonly></td>
+            <td><input type="text" maxlength="1">🔥</td>
+            <td><input type="text" maxlength="1">⭐</td>
+            <td><input type="text" maxlength="1">🍁</td>
+            <td class="highlight"><input type="text" maxlength="1" value="" readonly></td>
+            <td><input type="text" maxlength="1">🔥</td>
+            <td><input type="text" maxlength="1">⭐</td>
+            <td class="highlight"><input type="text" maxlength="1" value="" readonly></td>
+            <td><input type="text" maxlength="1">💧</td>
+            <td><input type="text" maxlength="1">⭐</td>
+            <td><input type="text" maxlength="1">🌹</td>
+            <td><input type="text" maxlength="1">🌈</td>
+            <td><input type="text" maxlength="1">💎</td>
+            <td><input type="text" maxlength="1">🌻</td>
+            <td><input type="text" maxlength="1">⭐</td>
+            <td class="highlight"><input type="text" maxlength="1" value="," readonly></td>
+        </tr>
+        <tr>
+            <td><input type="text" maxlength="1">🍀</td>
+            <td><input type="text" maxlength="1">💎</td>
+            <td><input type="text" maxlength="1">🌜</td>
+            <td><input type="text" maxlength="1">🐞</td>
+            <td><input type="text" maxlength="1">🌹</td>
+            <td class="highlight"><input type="text" maxlength="1" value="" readonly></td>
+            <td><input type="text" maxlength="1">⚡</td>
+            <td><input type="text" maxlength="1">🌿</td>
+            <td><input type="text" maxlength="1">🍀</td>
+            <td><input type="text" maxlength="1">🚀</td>
+            <td><input type="text" maxlength="1">🌹</td>
+            <td><input type="text" maxlength="1">🌜</td>
+            <td><input type="text" maxlength="1">🐞</td>
+            <td><input type="text" maxlength="1">⭐</td>
+            <td><input type="text" maxlength="1">💎</td>
+            <td><input type="text" maxlength="1">💧</td>
+            <td><input type="text" maxlength="1">🌹</td>
+            <td class="highlight"><input type="text" maxlength="1" value="" readonly></td>
+            <td><input type="text" maxlength="1">⭐</td>
+            <td class="highlight"><input type="text" maxlength="1" value="" readonly></td>
+            <td><input type="text" maxlength="1">💎</td>
+            <td><input type="text" maxlength="1">🌜</td>
+            <td><input type="text" maxlength="1">🔥</td>
+            <td><input type="text" maxlength="1">🚀</td>
+            <td><input type="text" maxlength="1">💎</td>
+            <td><input type="text" maxlength="1">💧</td>
+            <td><input type="text" maxlength="1">🌹</td>
+            <td><input type="text" maxlength="1">⚡</td>
+            <td><input type="text" maxlength="1">🌹</td>
+            <td><input type="text" maxlength="1">🌿</td>
+        </tr>
+    </table>
+
+    <div id="conteudo">
+        <h2>Me dá um beijo?</h2>
+        <div style="margin: auto;width: 170px; height: auto;">
+            <button style="position: fixed;display: block;" class="btn" onclick="sim()">SIM</button>
+            <button class="btn" onclick="desvia(this)" onmouseover="desvia(this)"
+                style="position: absolute;">NÃO</button>
+        </div>
+        <div id="imagens">
+            <div class="coluna esquerda">
+                <img src="./imgs/image (1).png" class="imagem-animada">
+                <img src="./imgs/image (2).png" class="imagem-animada">
+            </div>
+            <div class="coluna centro">
+                <img src="./imgs/image.png" class="imagem-animada">
+            </div>
+            <div class="coluna direita">
+                <img src="./imgs/image (3).png" class="imagem-animada">
+                <img src="./imgs/image (4).png" class="imagem-animada">
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const inputs = document.querySelectorAll("input[type='text']");
+
+            inputs.forEach((input, index) => {
+                input.addEventListener("input", function () {
+                    if (input.value.length === input.maxLength) {
+                        const nextInput = inputs[index + 1];
+                        if (nextInput) {
+                            nextInput.focus();
+                        }
+                    }
+                });
+            });
+        });
+
+        function verificarInputs() {
+            const inputsPreenchidos = Array.from(document.querySelectorAll('td input[type="text"]:not([readonly])'))
+                .every(input => input.value !== "");
+
+            if (inputsPreenchidos) {
+                document.getElementById('conteudo').style.display = 'block';
+            }
+        }
+
+        document.addEventListener('input', verificarInputs);
+
+        function sim() {
+            const imagens = document.getElementById("imagens");
+            imagens.style.bottom = "10%";
+
+
+            alert("Feliz aniversário, meu amor! Hoje celebramos a mulher incrível e forte que você é.\nA cada dia ao seu lado, me sinto mais completo e grato.\nQue este novo ciclo traga toda a felicidade que você merece e que cada sonho seu se realize, minha companheira e inspiração!");
+            location.href = "https://music.youtube.com/watch?v=3-NTv0CdFCk";
+        }
+
+        function desvia(btn) {
+            btn.style.position = 'absolute';
+            btn.style.bottom = geraPosicao(10, 90);
+            btn.style.left = geraPosicao(10, 90);
+            console.log('opa, desviei...');
+        }
+
+        function geraPosicao(min, max) {
+            return (Math.random() * (max - min) + min) + "%";
+        }
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
